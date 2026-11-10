@@ -11,13 +11,19 @@
 <script>
 /* Detecta la tienda por el dominio y aplica marca + config. */
 (function(){
+  var VARGAS = {dom:"vargasdiesel.cl", tienda:"Vargas Diesel", marca:"title",
+      accent:"#FF7A1A", accent2:"#c85a00", fontH:'"Fjalla One",system-ui,sans-serif', gfont:"family=Fjalla+One"};
+  var CPR = {dom:"comercialcpr.cl", tienda:"Comercial CPR", marca:"vendor",
+      accent:"#004F8F", accent2:"#D32F2F", fontH:'"Montserrat",system-ui,sans-serif', gfont:"family=Montserrat:wght@700;800"};
+  var BYC = {dom:"repuestosbyc.cl", tienda:"Repuestos BYC", marca:"title",
+      accent:"#C00000", accent2:"#7a0000", fontH:'"Oswald",system-ui,sans-serif', gfont:"family=Oswald:wght@600;700"};
   var HOSTS = {
-    "stock.vargasdiesel.cl": {dom:"vargasdiesel.cl", tienda:"Vargas Diesel", marca:"title",
-      accent:"#FF7A1A", accent2:"#c85a00", fontH:'"Fjalla One",system-ui,sans-serif', gfont:"family=Fjalla+One"},
-    "stock.comercialcpr.cl": {dom:"comercialcpr.cl", tienda:"Comercial CPR", marca:"vendor",
-      accent:"#004F8F", accent2:"#D32F2F", fontH:'"Montserrat",system-ui,sans-serif', gfont:"family=Montserrat:wght@700;800"},
-    "stock.repuestosbyc.cl": {dom:"repuestosbyc.cl", tienda:"Repuestos BYC", marca:"title",
-      accent:"#C00000", accent2:"#7a0000", fontH:'"Oswald",system-ui,sans-serif', gfont:"family=Oswald:wght@600;700"}
+    "stock.vargasdiesel.cl": VARGAS,
+    "stock.comercialcpr.cl": CPR,
+    "stock.repuestosbyc.cl": BYC,
+    "stock-vargas.vercel.app": VARGAS,
+    "stock-cpr.vercel.app": CPR,
+    "stock-byc.vercel.app": BYC
   };
   var h = (location.hostname||"").toLowerCase();
   var c = HOSTS[h] || HOSTS["stock.vargasdiesel.cl"]; // fallback para previsualización

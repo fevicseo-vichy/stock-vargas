@@ -8,6 +8,9 @@ const HOST_ENV = {
   'stock.vargasdiesel.cl': 'PW_VARGAS',
   'stock.comercialcpr.cl': 'PW_CPR',
   'stock.repuestosbyc.cl': 'PW_BYC',
+  'stock-vargas.vercel.app': 'PW_VARGAS',
+  'stock-cpr.vercel.app': 'PW_CPR',
+  'stock-byc.vercel.app': 'PW_BYC',
 };
 
 function unauthorized() {
